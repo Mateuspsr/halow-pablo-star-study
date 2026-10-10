@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "minimumSeparationIncludingGatewayMeters": 100.0,
+  "nearestStationMeters": 100.0,
+  "farthestStationMeters": 7000.714249274855,
+  "violatingPairs": 0,
+  "topologyExecutedInNs3": false
+}

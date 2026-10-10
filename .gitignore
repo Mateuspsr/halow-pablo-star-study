@@ -1,0 +1,21 @@
+﻿__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+!.env.example
+**/build/
+*.log
+*.zip
+.vscode/
+.idea/
+node_modules/
+AGENTS.md
+
+# Artefatos locais
+/validation/link-quality/link-quality-check
+/validation/raw-membership/raw-membership-check
+/provenance/import.json
+
+/source/
+/provenance/partial-import-source-20261009/

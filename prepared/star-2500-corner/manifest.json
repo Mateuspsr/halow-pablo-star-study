@@ -1,0 +1,22 @@
+[
+  {
+    "file": "geometry-verification.json",
+    "bytes": 217,
+    "sha256": "c83d665f3dc0748a9525334cb947dbf122103ceca8e2d4cffc2ae55cfaae30a0"
+  },
+  {
+    "file": "layout.svg",
+    "bytes": 130572,
+    "sha256": "95f0b60e077f54f82f18ff0f24c77db51215789b856cd0e862d233558f9b0086"
+  },
+  {
+    "file": "raw-preflight.json",
+    "bytes": 1237,
+    "sha256": "1cdd08035cf2f021152df2314d05ca0335d546873696c7a054b91f81a7766b10"
+  },
+  {
+    "file": "topology.json",
+    "bytes": 740188,
+    "sha256": "ca8bda248270419719ebc647b5e86f93ebbb1469e17b41afbabee0ffac38c858"
+  }
+]

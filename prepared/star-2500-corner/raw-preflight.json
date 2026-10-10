@@ -1,0 +1,37 @@
+{
+  "status": "blocked_global_raw_implementation_and_model_validation",
+  "nPhysicalStations": 2500,
+  "confirmedPolicy": "one RAW group for all stations; no page rotation",
+  "onePageRangeDescriptorRepresentsAllStations": false,
+  "pagePopulationExpected": {
+    "0": 2047,
+    "1": 453
+  },
+  "aidEnd2500EncodedIn11Bits": 452,
+  "pageRangeDescriptorsForAllAssignedAids": 2,
+  "pageDescriptors": [
+    {
+      "page": 0,
+      "localAidStart": 1,
+      "localAidEnd": 2047
+    },
+    {
+      "page": 1,
+      "localAidStart": 0,
+      "localAidEnd": 452
+    }
+  ],
+  "policyDecisionPending": false,
+  "pageRangesAreChosenPolicy": false,
+  "globalAllStationsSupportValidated": false,
+  "knownModelWork": [
+    "Validate all-stations RAW representation and AP/STA membership without page rotation",
+    "AP must reconstruct global AID from RAW page/local fields for page-scoped groups",
+    "TIM/page selection must align with the advertised RAW page",
+    "partial association must not dereference absent AID entries",
+    "RPS copies must own their active storage",
+    "traffic must not wait for all geographically unreachable STAs"
+  ],
+  "researchEligible": false,
+  "simulationStarted": false
+}

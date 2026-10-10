@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "recordedLocalDate": "2026-10-09",
+  "source": "explicit human clarification in this chat",
+  "sourceArchiveSha256": "9713d7d51f6c2300632a39b19e59eb1c7de6abe29c6273ade39de424d28d5bd6",
+  "populationReference": {"stations": 2500, "gateways": 1},
+  "geometryReference": "prepared/star-2500-corner/topology.json",
+  "domainMeters": {"width": 5000, "height": 5000},
+  "minimumDeviceSeparationMeters": 100,
+  "staticDuringMeasurement": ["positions", "relayRoles", "intendedBssidsAndParents", "routes", "rawMembershipAndSchedule"],
+  "observedAssociationMayFail": true,
+  "oneRawMeaning": "one group shared by all stations, not one per beacon alternating AID pages",
+  "scenarios": [
+    {"id": "S1", "name": "Estrela com 1 RAW", "topology": "star", "relays": false, "rawScope": "global", "rawGroupCount": 1, "membership": "all stations"},
+    {"id": "S2", "name": "Estrela com mais de 1 RAW", "topology": "star", "relays": false, "rawScope": "gateway-partition", "rawGroupCount": {"minimum": 2, "candidateLevels": [2, 3]}, "membership": "partition covers all stations"},
+    {"id": "R1", "name": "Rede com vários relays e 1 RAW", "topology": "relay-network", "relays": true, "rawScope": "global-across-network", "rawGroupCount": 1, "membership": "all stations including relay STA interfaces"},
+    {"id": "R2", "name": "Rede com relays e 1 RAW por relay", "topology": "relay-network", "relays": true, "rawScope": "per-relay", "rawGroupsPerRelay": 1, "membership": "each relay group serves its attached stations", "gatewayBackhaulRawPolicy": null}
+  ],
+  "pairedComparisons": [
+    {"ids": ["S1", "S2"], "sameInputs": ["stationPositions", "trafficPlan", "phyParameters", "measurementWindows", "seedAndRunPlan"]},
+    {"ids": ["R1", "R2"], "sameInputs": ["stationPositions", "relayPositionsAndRoles", "parentsAndRoutes", "trafficPlan", "radiosAndChannels", "phyParameters", "measurementWindows", "seedAndRunPlan"]}
+  ],
+  "declaredDesignWorkRemaining": [
+    "relay count, positions and layers",
+    "whether relays are additional nodes or designated stations from the initial population",
+    "gateway/backhaul schedule for R2",
+    "global RAW coordination across BSSs and radio channels for R1",
+    "total channel-time budget and group slot allocation for comparison",
+    "quality estimator and RSSI validation, with relay selection frozen before measurement",
+    "traffic, measurement/drain windows and independent run plan"
+  ],
+  "previousDegradationCriterion": {"packetLossFractionGreaterThan": 0.05, "requiresValidRawService": true},
+  "implementationStatus": "requirements recorded; global RAW and ns-3 trace integration still require validation",
+  "simulationExecuted": false,
+  "researchResultsAvailable": false
+}

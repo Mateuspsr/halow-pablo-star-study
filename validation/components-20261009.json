@@ -1,0 +1,53 @@
+{
+  "recordedAtUtc": "2026-10-09T13:05:30.680855+00:00",
+  "clientStudyDate": "2026-10-09",
+  "sourceArchiveSha256": "9713d7d51f6c2300632a39b19e59eb1c7de6abe29c6273ade39de424d28d5bd6",
+  "originalSource": {
+    "filesChecked": 3324,
+    "changedOrMissing": [],
+    "extraFiles": [],
+    "intact": true
+  },
+  "scope": "standalone membership and link-quality regression components only",
+  "logs": [
+    {
+      "path": "validation\\raw-membership\\run.log",
+      "sha256": "1272322c37917fe7b55704b2de0a4970b399c1881cf7868526f3c9d91e6c0df2",
+      "output": "assertions=32788 failures=0 plannedAllStations=2500\n"
+    },
+    {
+      "path": "validation\\link-quality-run.log",
+      "sha256": "8cff551ecb0f7666dee979244b797cd6934dc8415fe016898db2d758cf0b3dbb",
+      "output": "PASS: 64 link-quality checks (synthetic unit inputs only)\n"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "implementation\\raw-membership.h",
+      "sha256": "60699525ebf2c2cd1d94bf2779922a26f2039499890d9345b0387ef6d54530a1"
+    },
+    {
+      "path": "tests\\raw-membership-check.cc",
+      "sha256": "c3b4daaa2cfa27f91b5b672de564c597885fe04c3dc5d92006c1ab889b7cfb5d"
+    },
+    {
+      "path": "implementation\\link-quality.h",
+      "sha256": "0ba8d4032e7665788d8d6c2ec75b0c52bf5b2ebfacabea87607ee948892c9666"
+    },
+    {
+      "path": "implementation\\link-quality.cc",
+      "sha256": "9b2fcd8f892ffc558ce2b836a52a56c700c5ede096a22a3d7b3cc68eab952e07"
+    },
+    {
+      "path": "tests\\link-quality-check.cc",
+      "sha256": "b688739b2e1d4f0bffdbea572d306e93993f265e5719d7fb4679601bede5d9c2"
+    },
+    {
+      "path": "study\\FOUR_SCENARIO_CONTRACT.json",
+      "sha256": "717b410d5e7193d88a43db6161240f7fedc8b192be5968a2d953ad3adaa00960"
+    }
+  ],
+  "ns3IntegrationValidated": false,
+  "ns3SimulationExecuted": false,
+  "researchResultsAvailable": false
+}
